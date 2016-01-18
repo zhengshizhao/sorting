@@ -32,5 +32,3 @@ function swap(temp, arr, i) {
 // 	arr.splice(arr.indexOf(biggest), 1);
 // 	return bubbleSort(arr).concat(biggest);
 // }
-Status API Training Shop Blog About Pricing
-© 2016 GitHub, Inc. Terms Privacy Security Contact Help
