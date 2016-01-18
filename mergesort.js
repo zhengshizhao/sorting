@@ -10,6 +10,7 @@ function merge(leftArr, rightArr) {
     // var leftArritem = leftArr[];
     if (leftArr.length === 0) return rightArr;
     if(rightArr.length === 0) return leftArr;
+    
     while (i < leftArr.length  && j < rightArr.length ) {  
     	if(leftArr[i] < rightArr[j]) {
 			sortedArr.push(leftArr[i]);
@@ -21,8 +22,8 @@ function merge(leftArr, rightArr) {
 
     }
 
-	    if (i === leftArr.length) sortedArr.concat(rightArr.slice(j));
-	    if (j === rightArr.length) sortedArr.concat(leftArr.slice(i));
+	if (i === leftArr.length) sortedArr =sortedArr.concat(rightArr.slice(j));
+	if (j === rightArr.length) sortedArr = sortedArr.concat(leftArr.slice(i));
 
 	// for (var i = 0; i < leftArr.length;) {
 	// 	for (var j = 0; j < rightArr.length;){
@@ -45,16 +46,16 @@ function split(arr) {
 	return [firstHalf, secondHalf];
 }
 
-// function mergeSort(arr) {
-// 	if (arr.length === 1 || arr.length === 0) {
-// 		return arr;
-// 	}
-// 	var arrays = split(arr)
-// 	var left = arrays[0];
-// 	var right = arrays[1];
+function mergeSort(arr) {
+	if (arr.length === 1 || arr.length === 0) {
+		return arr;
+	}
+	var arrays = split(arr)
+	var left = arrays[0];
+	var right = arrays[1];
 	
     
-// 	return merge(mergeSort(left), mergeSort(right));
+	return merge(mergeSort(left), mergeSort(right));
 
 
-// }
+}
